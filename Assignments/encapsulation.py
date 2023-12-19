@@ -8,11 +8,16 @@ class Protected:
     def setprivate(self, private):
         self.__privatevar = private
 
+    def protectedvar(self):
+        self._protectvar = 0
+
 
 obj = Protected()
 obj.getprivate()
 obj.setprivate(11)
 obj.getprivate()
+obj._protectvar = 2
+print(obj._protectvar)
 
 #Obj gets the data of the private variable
 

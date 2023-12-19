@@ -21,4 +21,4 @@ print(obj._protectvar)
 
 #Obj gets the data of the private variable
 
-#the output should be 20, 11
+#the output should be 20, 11, 2

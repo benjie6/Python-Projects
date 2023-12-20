@@ -2,6 +2,8 @@ import tkinter as tk
 import tkinter.filedialog
 import os
 import shutil
+import datetime
+from datetime import timedelta
 from tkinter import *
 
 
@@ -72,13 +74,13 @@ class ParentWindow(Frame):
         source_files = os.listdir(source)
         #runs through each file in the source directory
         for i in source_files:
-            file_path = os.path.join(source, file)
+            file_path = os.path.join(source, i)
             if os.path.isfile(file_path):
                 modified_time = datetime.datetime.fromtimestamp(os.path.getmtime(file_path))
                 time_diff = datetime.datetime.now() - modified_time
                 if time_diff < datetime.timedelta(hours=24):
                     shutil.move(file_path, destination)
-                    print(f"{file} was successfully transferred.")
+                    print(i + " was successfully transferred.")
 
     #Creates function to exit program
     def exit_program(self):
@@ -88,7 +90,6 @@ class ParentWindow(Frame):
 
         
         
-
 
 
 

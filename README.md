@@ -1,5 +1,5 @@
 # Python-Projects
-these are basic projects written in pyyhon. they use various modules such as tkinter or sqlite3
+these are basic projects written in python. they use various modules such as tkinter or sqlite3
 
 ## Projects 
 -phonebook
